@@ -20,8 +20,10 @@ if [ ! -f plugins/SavannaCore.jar ]; then
     cd temp-SavannaCore-cloned
     echo "> Packaging SavannaCore plugin..."
     mvn package
+    cd ..
     echo "> Movig plugin to plugins..."
-    mv target/SavannaCore*.jar ../plugins/SavannaCore.jar
+    mv temp-SavanaCore-cloned/target/SavannaCore*.jar plugins/SavannaCore.jar
+    rm -r temp-SavannaCore-cloned
     echo "> done."
 fi
 
