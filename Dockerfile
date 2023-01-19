@@ -1,6 +1,6 @@
 FROM debian:bullseye-slim
 WORKDIR /opt/
-RUN apt-get update && apt-get install -y openjdk-17-jdk wget git && apt-get clean
+RUN apt-get update && apt-get install -y openjdk-17-jdk wget curl git && apt-get clean
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
  && curl -fsSL -o /tmp/apache-maven.tar.gz https://dlcdn.apache.org/maven/maven-3/3.8.7/binaries/apache-maven-3.8.7-bin.tar.gz \
  && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1 \
