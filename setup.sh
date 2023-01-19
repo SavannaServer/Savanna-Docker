@@ -10,6 +10,21 @@ if [ ! -f server.jar ] || [ "$UPDATE" = "true" ]; then
     echo "> done."
 fi
 
+if [ ! -d plugins ]; then
+    mkdir plugins
+fi
+
+if [ ! -f plugins/SavannaCore.jar ]; then
+    echo "> Cloning latest SavannaCore plugin..."
+    git clone https://github.com/RamuneRemonedo/SavannaCore temp-SavannaCore-cloned
+    cd temp-SavannaCore-cloned
+    echo "> Packaging SavannaCore plugin..."
+    mvn package
+    echo "> Movig plugin to plugins..."
+    mv target/SavannaCore*.jar ../plugins/SavannaCore.jar
+    echo "> done."
+fi
+
 if [ "$EULA" = "true" ]; then
     echo "eula=true" > eula.txt
 fi
