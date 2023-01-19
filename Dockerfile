@@ -1,6 +1,6 @@
 FROM debian:bullseye-slim
 WORKDIR /opt/
-RUN apt-get update && apt-get install -y openjdk-17-jre-headless wget && apt-get clean
+RUN apt-get update && apt-get install -y openjdk-17-jdk wget maven && apt-get clean
 COPY setup.sh /opt/
 ENV MEMORY=4G
 ENV VERSION=1.19.3
