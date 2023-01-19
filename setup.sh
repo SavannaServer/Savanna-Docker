@@ -24,6 +24,7 @@ if [ ! -f plugins/SavannaCore.jar ]; then
     echo "> Movig plugin to plugins..."
     mv temp-SavannaCore-cloned/target/SavannaCore*.jar plugins/SavannaCore.jar
     rm -r temp-SavannaCore-cloned
+    rm -r /root/.m2
     echo "> done."
 fi
 
