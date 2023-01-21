@@ -16,7 +16,7 @@ fi
 
 if [ ! -f plugins/SavannaCore.jar ]; then
     echo "> Cloning latest SavannaCore plugin..."
-    git clone https://github.com/RamuneRemonedo/SavannaCore temp-SavannaCore-cloned
+    git clone https://github.com/SavannaServer/SavannaCore-Plugin temp-SavannaCore-cloned
     cd temp-SavannaCore-cloned
     echo "> Packaging SavannaCore plugin..."
     mvn package
