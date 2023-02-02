@@ -8,6 +8,6 @@ RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
  && rm -f /tmp/apache-maven.tar.gz \
  && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
 COPY setup.sh /opt/
-ENV MEMORY=4G
+ENV MEMORY=2G
 ENV VERSION=1.19.3
 ENTRYPOINT ["/bin/sh", "setup.sh"]
