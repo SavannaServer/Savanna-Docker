@@ -1,4 +1,5 @@
 FROM debian:bullseye-slim
+LABEL org.opencontainers.image.source=https://github.com/ユーザ名/リポジトリ名
 WORKDIR /opt/
 RUN apt-get update && apt-get install -y openjdk-17-jdk wget curl git && apt-get clean
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
